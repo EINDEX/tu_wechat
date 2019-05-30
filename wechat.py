@@ -105,7 +105,7 @@ class Mession:
         res = []
         for i in r:
             if self.only_tu:
-                print(f"chick {i['title']}")
+                print(f"check {i['title']}")
                 if not self.filter_den(i['content_url']):
                     continue
             for k in list(i.keys()):
@@ -119,7 +119,7 @@ class Mession:
 
 
 class Wechat:
-    def data(self, start: str, end: str, only_tu=True):
+    def date(self, start: str, end: str, only_tu=True):
         with open('request.curl', 'r') as f:
             curl_commend = f.read()
 
@@ -129,7 +129,7 @@ class Wechat:
         m = Mession(curl_commend, start, end, only_tu)
         m.do()
 
-    def data_to_today(self, start: str, only_tu=True):
+    def date_to_today(self, start: str, only_tu=True):
         self.data(start, str(date.today()), only_tu)
 
 
