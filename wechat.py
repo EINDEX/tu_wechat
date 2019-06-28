@@ -130,7 +130,7 @@ class Wechat:
         m.do()
 
     def date_to_today(self, start: str, only_tu=True):
-        self.data(start, str(date.today()), only_tu)
+        self.date(start, str(date.today()), only_tu)
 
 
 if __name__ == "__main__":
